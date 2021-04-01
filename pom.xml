@@ -40,6 +40,7 @@
 
 	<build>
 		<plugins>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -52,6 +53,18 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.openrewrite.maven</groupId>
+				<artifactId>rewrite-maven-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<activeRecipes>
+						<recipe>org.openrewrite.java.format.AutoFormat</recipe>
+					</activeRecipes>
+				</configuration>
+			</plugin>
+
 		</plugins>
 	</build>
 
