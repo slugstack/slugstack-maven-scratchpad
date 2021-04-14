@@ -2,24 +2,14 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.4</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>io.slugstack.oss</groupId>
+        <artifactId>unspecified-maven-project</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>io.slugstack.oss</groupId>
-    <artifactId>unspecified-maven-project</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>unspecified-maven-project</name>
-    <description>For random testing with maven-based projects</description>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>module-library</module>
-        <module>module-consumer</module>
-    </modules>
+    <artifactId>module-library</artifactId>
 
     <properties>
         <java.version>11</java.version>
@@ -37,6 +27,7 @@
                     </activeRecipes>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
