@@ -15,20 +15,20 @@
         <java.version>11</java.version>
     </properties>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.openrewrite.maven</groupId>
-                <artifactId>rewrite-maven-plugin</artifactId>
-                <version>4.0.0</version>
-                <configuration>
-                    <activeRecipes>
-                        <recipe>org.openrewrite.java.format.AutoFormat</recipe>
-                    </activeRecipes>
-                </configuration>
-            </plugin>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.openrewrite.maven</groupId>-->
+<!--                <artifactId>rewrite-maven-plugin</artifactId>-->
+<!--                <version>4.0.0</version>-->
+<!--                <configuration>-->
+<!--                    <activeRecipes>-->
+<!--                        <recipe>org.openrewrite.java.format.AutoFormat</recipe>-->
+<!--                    </activeRecipes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
 
-        </plugins>
-    </build>
+<!--        </plugins>-->
+<!--    </build>-->
 
 </project>
