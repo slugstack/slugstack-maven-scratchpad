@@ -11,10 +11,6 @@
 
     <artifactId>module-consumer</artifactId>
 
-    <properties>
-        <java.version>11</java.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>io.slugstack.oss</groupId>
@@ -24,25 +20,9 @@
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
+            <artifactId>junit-jupiter-api</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.openrewrite.maven</groupId>-->
-<!--                <artifactId>rewrite-maven-plugin</artifactId>-->
-<!--                <version>4.0.0</version>-->
-<!--                <configuration>-->
-<!--                    <activeRecipes>-->
-<!--                        <recipe>org.openrewrite.java.format.AutoFormat</recipe>-->
-<!--                    </activeRecipes>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-
-<!--        </plugins>-->
-<!--    </build>-->
 
 </project>
