@@ -41,13 +41,12 @@
                 <!-- <version>4.0.1-SNAPSHOT</version> -->
                 <configuration>
                     <activeRecipes>
+                        <recipe>org.openrewrite.java.format.AutoFormat</recipe>
+                        <recipe>org.openrewrite.java.testing.junit5.JUnit5BestPractices</recipe>
+
                         <!-- these two recipes are having issues in gradle land -->
-                        <recipe>org.openrewrite.java.testing.junit5.UseMockitoExtension</recipe>
                         <!-- <recipe>org.openrewrite.java.testing.junit5.RunnerToExtension</recipe> -->
                         <!-- <recipe>org.openrewrite.java.testing.junit5.RemoveObsoleteRunners</recipe> -->
-
-                        <!-- <recipe>org.openrewrite.java.format.AutoFormat</recipe> -->
-                        <!-- <recipe>org.openrewrite.java.testing.junit5.JUnit5BestPractices</recipe> -->
                     </activeRecipes>
                 </configuration>
                 <dependencies>
