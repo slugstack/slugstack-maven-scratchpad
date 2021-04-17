@@ -41,7 +41,7 @@
                 <!-- <version>4.0.1-SNAPSHOT</version> -->
                 <configuration>
                     <activeRecipes>
-                        <recipe>org.openrewrite.java.format.AutoFormat</recipe>
+                        <!-- <recipe>org.openrewrite.java.format.AutoFormat</recipe> -->
                         <recipe>org.openrewrite.java.testing.junit5.JUnit5BestPractices</recipe>
 
                         <!-- these two recipes are having issues in gradle land -->
