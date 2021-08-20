@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.5</version>
+        <version>2.5.4</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
 
@@ -12,8 +12,36 @@
     <artifactId>unspecified-maven-project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>unspecified-maven-project</name>
-    <description>For random testing with maven-based projects</description>
+
     <packaging>pom</packaging>
+    <description>For random testing with maven-based projects</description>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Aaron Gershman</name>
+            <url>https://github.com/aegershman</url>
+            <id>aegershman</id>
+        </developer>
+    </developers>
+
+    <organization>
+        <name>slugstack.io</name>
+        <url>https://slugstack.io/</url>
+    </organization>
+
+    <scm>
+        <connection>scm:git:https://github.com/slugstack/unspecified-maven-project.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/slugstack/unspecified-maven-project.git</developerConnection>
+        <url>https://github.com/slugstack/unspecified-maven-project/tree/main</url>
+        <tag>HEAD</tag>
+    </scm>
 
     <modules>
         <module>module-library</module>
@@ -34,29 +62,26 @@
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.openrewrite.maven</groupId>
                 <artifactId>rewrite-maven-plugin</artifactId>
-                <version>4.1.1</version>
-                <!-- <version>4.0.1-SNAPSHOT</version> -->
+                <version>4.9.0</version>
                 <configuration>
                     <activeRecipes>
-                        <!-- <recipe>org.openrewrite.java.format.AutoFormat</recipe> -->
+                        <recipe>org.openrewrite.java.format.AutoFormat</recipe>
                         <recipe>org.openrewrite.java.testing.junit5.JUnit5BestPractices</recipe>
-
-                        <!-- these two recipes are having issues in gradle land -->
-                        <!-- <recipe>org.openrewrite.java.testing.junit5.RunnerToExtension</recipe> -->
-                        <!-- <recipe>org.openrewrite.java.testing.junit5.RemoveObsoleteRunners</recipe> -->
                     </activeRecipes>
                 </configuration>
                 <dependencies>
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-testing-frameworks</artifactId>
-                        <version>1.2.1</version>
+                        <version>1.10.0</version>
                     </dependency>
                 </dependencies>
             </plugin>
+
         </plugins>
     </build>
 
