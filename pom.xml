@@ -58,7 +58,6 @@
         <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
         <maven.compiler.showWarnings>true</maven.compiler.showWarnings>
         <maven.compiler.failOnWarning>true</maven.compiler.failOnWarning>
-
     </properties>
 
     <build>
