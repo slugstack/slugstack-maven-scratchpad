@@ -20,6 +20,7 @@
     <modules>
         <module>module-library</module>
         <module>module-consumer</module>
+        <module>module-standalone</module>
     </modules>
 
     <properties>
