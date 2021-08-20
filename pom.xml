@@ -32,15 +32,21 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit4.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
                 <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter</artifactId>
+                <artifactId>junit-jupiter-api</artifactId>
                 <version>${junit5.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit4.version}</version>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${junit5.version}</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
@@ -98,6 +104,7 @@
                 <version>4.9.0</version>
                 <configuration>
                     <activeRecipes>
+                        <recipe>io.slugstack.oss.active</recipe>
                         <recipe>org.openrewrite.java.format.AutoFormat</recipe>
                         <recipe>org.openrewrite.java.testing.junit5.JUnit5BestPractices</recipe>
                     </activeRecipes>

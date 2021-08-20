@@ -1,0 +1,9 @@
+---
+type: specs.openrewrite.org/v1beta/recipe
+name: io.slugstack.oss.active
+recipeList:
+  - org.openrewrite.maven.UpgradeDependencyVersion:
+      groupId: junit
+      artifactId: junit
+      newVersion: 4.x
+      trustParent: true
