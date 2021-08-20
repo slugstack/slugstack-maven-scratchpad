@@ -7,3 +7,4 @@ recipeList:
       artifactId: junit
       newVersion: 4.x
       trustParent: true
+  - org.openrewrite.java.format.AutoFormat
