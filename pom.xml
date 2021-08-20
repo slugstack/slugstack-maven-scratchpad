@@ -97,16 +97,16 @@
                 </plugin>
 
                 <!-- experimenting with putting rewrite-maven-plugin in the pluginManagement block -->
-                <plugin>
-                    <groupId>org.openrewrite.maven</groupId>
-                    <artifactId>rewrite-maven-plugin</artifactId>
-                    <version>4.9.0</version>
-                    <configuration>
-                        <activeRecipes>
-                            <recipe>io.slugstack.oss.active</recipe>
-                        </activeRecipes>
-                    </configuration>
-                </plugin>
+                <!--                <plugin>-->
+                <!--                    <groupId>org.openrewrite.maven</groupId>-->
+                <!--                    <artifactId>rewrite-maven-plugin</artifactId>-->
+                <!--                    <version>4.9.0</version>-->
+                <!--                    <configuration>-->
+                <!--                        <activeRecipes>-->
+                <!--                            <recipe>io.slugstack.oss.active</recipe>-->
+                <!--                        </activeRecipes>-->
+                <!--                    </configuration>-->
+                <!--                </plugin>-->
             </plugins>
         </pluginManagement>
 
