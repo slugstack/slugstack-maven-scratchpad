@@ -6,7 +6,7 @@ import org.junit.runners.JUnit4;
 
 @RunWith(JUnit4.class)
 
-public class ConsumerApplicationJUnit4Tests {
+public class ConsumerApplicationTests {
 
     @Test
     public void contextLoads() {
