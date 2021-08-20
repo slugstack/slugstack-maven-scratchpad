@@ -1,4 +1,4 @@
-package io.slugstack.oss.consumer;
+package io.slugstack.oss.standalone;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
