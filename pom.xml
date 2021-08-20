@@ -105,8 +105,8 @@
                 <configuration>
                     <activeRecipes>
                         <recipe>io.slugstack.oss.active</recipe>
-                        <recipe>org.openrewrite.java.format.AutoFormat</recipe>
-                        <recipe>org.openrewrite.java.testing.junit5.JUnit5BestPractices</recipe>
+<!--                        <recipe>org.openrewrite.java.format.AutoFormat</recipe>-->
+<!--                        <recipe>org.openrewrite.java.testing.junit5.JUnit5BestPractices</recipe>-->
                     </activeRecipes>
                 </configuration>
                 <dependencies>
