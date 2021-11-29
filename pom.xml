@@ -26,7 +26,7 @@
     <properties>
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit5.version>5.8.1</junit5.version>
+        <junit5.version>5.8.2</junit5.version>
         <junit4.version>4.13.1</junit4.version>
     </properties>
 
