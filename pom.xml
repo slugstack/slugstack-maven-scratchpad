@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <!--    <parent>-->
-    <!--        <groupId>org.springframework.boot</groupId>-->
-    <!--        <artifactId>spring-boot-starter-parent</artifactId>-->
-    <!--        <version>2.5.4</version>-->
-    <!--        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
-    <!--    </parent>-->
 
     <groupId>io.slugstack.oss</groupId>
-    <artifactId>unspecified-maven-project</artifactId>
+    <artifactId>slugstack-maven-scratchpad</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>unspecified-maven-project</name>
-
+    <name>slugstack-maven-scratchpad</name>
     <packaging>pom</packaging>
     <description>For random testing with maven-based projects</description>
 
-    <modules>
-        <module>module-library</module>
-        <module>module-consumer</module>
-        <module>module-standalone</module>
-    </modules>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Aaron Gershman</name>
+            <url>https://github.com/aegershman</url>
+            <id>aegershman</id>
+        </developer>
+    </developers>
+
+    <organization>
+        <name>slugstack.io</name>
+        <url>https://slugstack.io/</url>
+    </organization>
+
+    <scm>
+        <connection>scm:git:https://github.com/slugstack/slugstack-maven-scratchpad.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/slugstack/slugstack-maven-scratchpad.git</developerConnection>
+        <url>https://github.com/slugstack/slugstack-maven-scratchpad/tree/main</url>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
         <java.version>11</java.version>
@@ -61,16 +74,20 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.8.1</version>
                     <configuration>
-                        <release>${java.version}</release>
-                        <!-- caught a lot of these just by doing ./mvnw -X compile and looking at configuration output -->
-                        <!-- most of these are on just for fun and curiosity -->
-                        <!-- usually keep these in the properties block, but will put them here for the time being just to shake things up-->
-                        <!-- <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>-->
-                        <!-- <maven.compiler.showWarnings>true</maven.compiler.showWarnings>-->
-                        <!-- <maven.compiler.failOnWarning>true</maven.compiler.failOnWarning>-->
-                        <showDeprecation>true</showDeprecation>
-                        <showWarnings>true</showWarnings>
-                        <failOnWarning>true</failOnWarning>
+                        <compilerArgs>
+                            <arg>-Xlint:deprecation</arg>
+                            <arg>-Xlint:unchecked</arg>
+                        </compilerArgs>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.3.1</version>
+                    <configuration>
+                        <source>${java.version}</source>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -82,60 +99,39 @@
                         <argLine>-Xmx512m</argLine>
                     </configuration>
                 </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.2.0</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.3.1</version>
-                    <configuration>
-                        <source>${java.version}</source>
-                    </configuration>
-                </plugin>
-
-                <!-- experimenting with putting rewrite-maven-plugin in the pluginManagement block -->
-                <!--                <plugin>-->
-                <!--                    <groupId>org.openrewrite.maven</groupId>-->
-                <!--                    <artifactId>rewrite-maven-plugin</artifactId>-->
-                <!--                    <version>4.9.0</version>-->
-                <!--                    <configuration>-->
-                <!--                        <activeRecipes>-->
-                <!--                            <recipe>io.slugstack.oss.active</recipe>-->
-                <!--                        </activeRecipes>-->
-                <!--                    </configuration>-->
-                <!--                </plugin>-->
             </plugins>
         </pluginManagement>
 
-        <!--        <plugins>-->
-        <!--            <plugin>-->
-        <!--                <groupId>org.openrewrite.maven</groupId>-->
-        <!--                <artifactId>rewrite-maven-plugin</artifactId>-->
-        <!--                <version>4.9.0</version>-->
-        <!--                <configuration>-->
-        <!--                    <activeRecipes>-->
-        <!--                        <recipe>io.slugstack.oss.active</recipe>-->
-        <!--                        &lt;!&ndash;                        <recipe>org.openrewrite.java.format.AutoFormat</recipe>&ndash;&gt;-->
-        <!--                        &lt;!&ndash;                        <recipe>org.openrewrite.java.testing.junit5.JUnit5BestPractices</recipe>&ndash;&gt;-->
-        <!--                    </activeRecipes>-->
-        <!--                </configuration>-->
-        <!--                <dependencies>-->
-        <!--                    <dependency>-->
-        <!--                        <groupId>org.openrewrite.recipe</groupId>-->
-        <!--                        <artifactId>rewrite-testing-frameworks</artifactId>-->
-        <!--                        <version>1.10.0</version>-->
-        <!--                    </dependency>-->
-        <!--                </dependencies>-->
-        <!--            </plugin>-->
-        <!--        </plugins>-->
+        <plugins>
+            <plugin>
+                <groupId>org.openrewrite.maven</groupId>
+                <artifactId>rewrite-maven-plugin</artifactId>
+                <version>4.16.0</version>
+                <configuration>
+                    <activeRecipes>
+                        <recipe>io.slugstack.oss.active</recipe>
+                    </activeRecipes>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.openrewrite.recipe</groupId>
+                        <artifactId>rewrite-testing-frameworks</artifactId>
+                        <version>1.15.1</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
     </build>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>ossrh-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <repositories>
         <repository>
-            <!-- for consuming upstream openrewrite snapshot artifacts from ossrh during development -->
             <id>ossrh-snapshots</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
             <snapshots>
@@ -147,31 +143,10 @@
         </repository>
     </repositories>
 
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <name>Aaron Gershman</name>
-            <url>https://github.com/aegershman</url>
-            <id>aegershman</id>
-        </developer>
-    </developers>
-
-    <organization>
-        <name>slugstack.io</name>
-        <url>https://slugstack.io/</url>
-    </organization>
-
-    <scm>
-        <connection>scm:git:https://github.com/slugstack/unspecified-maven-project.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/slugstack/unspecified-maven-project.git</developerConnection>
-        <url>https://github.com/slugstack/unspecified-maven-project/tree/main</url>
-        <tag>HEAD</tag>
-    </scm>
+    <modules>
+        <module>module-library</module>
+        <module>module-consumer</module>
+        <module>module-standalone</module>
+    </modules>
 
 </project>
