@@ -1,10 +1,9 @@
 ---
 type: specs.openrewrite.org/v1beta/recipe
-name: io.slugstack.oss.active
+name: com.yourorg.LogbackInsight
+displayName: Find Logback Usage
 recipeList:
   - org.openrewrite.maven.UpgradeDependencyVersion:
-      groupId: junit
-      artifactId: junit
-      newVersion: 4.x
-      trustParent: true
-  - org.openrewrite.java.format.AutoFormat
+      groupId: ch.qos.logback
+      artifactId: logback-core
+      newVersion: latest.release
