@@ -44,6 +44,11 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.17</version>
+            </dependency>
+            <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>4.13.2</version>
@@ -107,7 +112,8 @@
                 <version>4.17.0</version>
                 <configuration>
                     <activeRecipes>
-                        <recipe>io.slugstack.oss.active</recipe>
+                        <!-- <recipe>io.slugstack.oss.active</recipe> -->
+                        <recipe>org.openrewrite.java.logging.slf4j.Log4jToSlf4j</recipe>
                     </activeRecipes>
                 </configuration>
                 <dependencies>

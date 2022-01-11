@@ -13,6 +13,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>io.slugstack.oss</groupId>
             <artifactId>module-library</artifactId>
             <version>0.0.1-SNAPSHOT</version>
