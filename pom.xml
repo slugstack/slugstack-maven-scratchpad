@@ -116,6 +116,11 @@
                         <artifactId>rewrite-testing-frameworks</artifactId>
                         <version>1.16.0</version>
                     </dependency>
+                    <dependency>
+                        <groupId>org.openrewrite.recipe</groupId>
+                        <artifactId>rewrite-logging-frameworks</artifactId>
+                        <version>1.1.0</version>
+                    </dependency>
                 </dependencies>
             </plugin>
         </plugins>
