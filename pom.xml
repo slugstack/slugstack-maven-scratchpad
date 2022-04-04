@@ -126,7 +126,7 @@
                     <dependency>
                         <groupId>org.openrewrite.recipe</groupId>
                         <artifactId>rewrite-logging-frameworks</artifactId>
-                        <version>1.4.0</version>
+                        <version>1.5.0</version>
                         <!-- <version>1.2.0-SNAPSHOT</version> -->
                     </dependency>
                 </dependencies>
